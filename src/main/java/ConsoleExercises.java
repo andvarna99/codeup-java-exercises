@@ -24,29 +24,29 @@ public class ConsoleExercises {
 //        input.close();
 
         //exercise code
-//        double pi = 3.14159;
-//        System.out.format("The value of pi is approximately %4.2f.%n",pi);
-//
+        double pi = 3.14159;
+        System.out.printf("The value of pi is approximately %4.2f.%n",pi);
+
         Scanner input = new Scanner(System.in);
         input.useDelimiter("\n");
-//
-//        System.out.println("Enter an integer: ");
-//        int myInt = input.nextInt();
-//        System.out.println("Your integer is " + myInt);
-//
-//        input.nextLine(); // gets the input out of the buffer
-//
-//        System.out.println("Enter three words: ");
-//        String firstString = input.next();
-//        String secondString = input.next();
-//        String thirdString = input.next();
-//        System.out.printf("Your words are %s %s %s%n", firstString, secondString,thirdString);
-//
-//        input.nextLine(); // gets the input out of the buffer
-//
-//        System.out.println("Enter a sentence: ");
-//        String mySentence = input.nextLine();
-//        System.out.println("Your sentence is " + mySentence);
+
+        System.out.println("Enter an integer: ");
+        int myInt = input.nextInt();
+        System.out.println("Your integer is " + myInt);
+
+        input.nextLine(); // gets the input out of the buffer
+
+        System.out.println("Enter three words: ");
+        String firstString = input.next();
+        String secondString = input.next();
+        String thirdString = input.next();
+        System.out.printf("Your words are %s%n %s%n %s%n", firstString, secondString,thirdString);
+
+        input.nextLine(); // gets the input out of the buffer
+
+        System.out.println("Enter a sentence: ");
+        String mySentence = input.nextLine();
+        System.out.println("Your sentence is " + mySentence);
 
         System.out.println("Enter the length and width of the classroom: ");
 //        String length = String.valueOf(Double.parseDouble(input.nextLine()));
@@ -57,7 +57,7 @@ public class ConsoleExercises {
         double width = input.nextDouble();
         double area = length * width;
         double perimeter = (length * 2) + (width * 2);
-        System.out.printf("The length is: %s%nThe width is: %s%nThe area is: %s%nThe perimeter is: %s%n", length, width, area, perimeter);
+        System.out.printf("The length is: %f%nThe width is: %f%nThe area is: %f%nThe perimeter is: %f%n", length, width, area, perimeter);
 
         input.close();
     }
