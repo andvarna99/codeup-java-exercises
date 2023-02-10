@@ -4,18 +4,19 @@ public class Bob {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
         String message = input.nextLine();
+
         do {
             if (message.contains("?")) {
-
                 System.out.println("""
                         Bob says: "Sure."
                         """);
-            } else if (message.contains("!")) {
+            } else if (message.contains("!")) { // message.endsWith("!")
                 System.out.println("""
                         Bob says: "Woah chill out!"
                         """);
-            } else if (message.equals("")) {
+            } else if (message.equals("")) { //message.trim().length() == 0
                 System.out.println("""
                         Bob says: "Fine. Be that way!"
                         """);
@@ -26,5 +27,8 @@ public class Bob {
             }
             message = input.nextLine();
         } while (!message.equalsIgnoreCase("bye"));
+
+        input.close();
+
     }
 }
