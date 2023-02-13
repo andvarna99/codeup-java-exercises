@@ -2,10 +2,6 @@ import java.util.Scanner;
 
 public class HighLow {
 
-    public static void main(String[] args) {
-    gameDev();
-    }
-
     public static int randomNumber(int max, int min){
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -29,8 +25,38 @@ public class HighLow {
                 break;
             }
         }
-
-
     }
+    public static void main(String[] args) {
+        gameDev();
 
+//        review code
+//        int myNumber = (int)(Math.random() * 100) + 1;
+//        int guesses = 0;
+//        int userInput;
+//        do {
+//            System.out.println("Choose a number between 1-100");
+//
+//            userInput = MethodsExercises.getInteger(1, 100);
+//
+//            compareGuess(userInput,myNumber);
+//
+//            guesses ++;
+//
+//            if(guesses > 5){
+//                break;
+//            }
+//
+//        }while(userInput != myNumber);
+//        System.out.println("GAME OVER");
+//        System.out.println("You made " + guesses + " guesses");
+    }
+//    public static void compareGuess(int userInput, int answer){
+//        if (userInput > answer) {
+//            System.out.println("LOWER");
+//        } else if (userInput < answer) {
+//            System.out.println("HIGHER");
+//        } else {
+//            System.out.println("GOOD GUESS");
+//        }
+//    }
 }

@@ -10,22 +10,32 @@ public class MethodsExercises {
         System.out.println(divNumbers(100,10));
         System.out.println(modNumbers(10,2));
 
-
-
         int userInput = getInteger(1,10);
 
-        // factorials
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Enter a number between 1 and 10: ");
         int num = getInteger(1,10);
-//        int num = input.nextInt();
+
         System.out.printf("Factorial of %d is %d", num, getFactorial(num));
         System.out.println();
-//        input.close();
 
-        //dice
         rollDice();
 
+        //review for number 4
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Welcome to my dice game!");
+//        String userResponse;
+//        do{
+//            System.out.println("How many sides would you like the dice to have?: ");
+//            int userInputReview = sc.nextInt();
+//            System.out.println("Roll the dice?(y/n)");
+//            String userChoice = sc.next();
+//            if(userChoice.equalsIgnoreCase("y")){
+//                System.out.println("First Result: " + dice(userInputReview));
+//                System.out.println("Second Result: " + dice(userInputReview));
+//            }
+//            System.out.println("Would you like to continue? (y/n)");
+//            userResponse = sc.next();
+//
+//        }while(userResponse.equalsIgnoreCase("yes"));
 
     }
 
@@ -77,20 +87,31 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number between 1 and 10: ");
         int num = input.nextInt();
-        if(num < 1 || num > 10){
-            return getInteger(min,max);
+        if(num < 1 || num > 10){ // if ( num >= min && num <= max)
+            return getInteger(min,max); //return num
         }
+//        System.out.println("Number not between " + min + "and " + max + ", enter another number");
+//        return getInteger(min,max);
         return num;
     }
 
     // 3.
     public static long getFactorial( int num) {
-        int res = 1;
-        for (int i = 2; i <= num; i++) {
+        int res = 1; //long answer = 1;
+        for (int i = 2; i <= num; i++) { // for ( int i = 1; i <= num; i++)
             res *= i;
         }
         return res;
     }
+
+//    public static long factorialRecursion(int num){
+//        //escape clause
+//        if(num == 1){
+//            return 1;
+//        }
+//        //need to return it in a smaller term
+//        return factorialRecursion(num - 1) * num;
+//    }
 
     // 4.
     public static int randomNumber(int max){
@@ -120,4 +141,11 @@ public class MethodsExercises {
 
         }while(exitChoice);
     }
+
+    //review for number 4
+//    public static int dice (int n){
+//        double dollroll = Math.floor(Math.random() * n);
+//        int intRoll = (int) dollroll;
+//        return intRoll;
+//    }
 }
