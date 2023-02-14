@@ -3,11 +3,11 @@ package shapes;
 import util.Input;
 
 public class CircleApp {
-    private static int circleCounter = 0;
 
     public static void main(String[] args) {
         Input userInput = new Input();
         boolean exit = false;
+        System.out.println("Make a circle! Enter the radius: ");
         do {
             Circle circle = new Circle(userInput.getInt());
 
@@ -20,11 +20,10 @@ public class CircleApp {
             boolean keepGoing = userInput.yesNo();
             System.out.println(keepGoing);
 
-            circleCounter++;
 
             if(!keepGoing){
-                System.out.println("You made "+ circleCounter + " circles!");
-                break;
+                System.out.println("You made "+ Circle.getCircleCounter() + " circles!");
+                break; //System.exit(1); successful exit has a 1
             }
         }while(!exit);
     }
