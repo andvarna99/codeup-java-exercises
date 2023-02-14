@@ -12,6 +12,13 @@ public class Person {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public static void main(String[] args) {
         Person andrea = new Person("Andrea");
 //        andrea.setName("Andrea");
