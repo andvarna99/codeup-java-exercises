@@ -13,5 +13,7 @@ public class ShapesTest {
         System.out.println(box2.getArea());
         System.out.println(box2.getPerimeter());
 
+        //check to see the right one is printing by souting in the og class methods
+
     }
 }
