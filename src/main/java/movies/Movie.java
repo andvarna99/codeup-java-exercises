@@ -1,7 +1,7 @@
 package movies;
 
 public class Movie {
-
+    // plain old java object (POJO) designed to house whatever it means for a movie
     private String name;
     private String category;
 
@@ -12,10 +12,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" +
-                "name='" + name + '\'' +
-                ", category='" + category + '\'' +
-                '}';
+        return name + "--" + category;
     }
 
     //accessors
