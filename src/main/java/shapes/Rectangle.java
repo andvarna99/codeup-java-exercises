@@ -6,13 +6,13 @@ public class Rectangle extends Quadrilateral implements Measurable{
     }
 
     @Override
-    public void setLength(double length) {
-
+    public double setLength(double length) {
+        return length;
     }
 
     @Override
-    public void setWidth(double length) {
-
+    public double setWidth(double width) {
+        return width;
     }
 
 //    protected int length;
