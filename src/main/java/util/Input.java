@@ -47,11 +47,11 @@ public class Input {
     public int getInt(int min, int max){
         System.out.println("Enter a number between " + min + " and " + max + ":");
         int num = scanner.nextInt();
-        //int anInt = getInt();
+//        int anInt = getInt();
         if (num >= min && num <= max) {
             System.out.println(num + " is between " + min + " and " + max + "!");
         }else {
-            return getInt(1, 10);
+            return getInt(min, max);
         }
         return num;
     }
@@ -60,8 +60,8 @@ public class Input {
     public  int getInt(){
         int userInt = 0;
         try {
-            String s = getString();
-            userInt = Integer.valueOf(s);
+            String s = getString(); //can be outside the try
+            userInt = Integer.valueOf(s); //not a checked exception
         }catch(NumberFormatException e){
             System.out.println("Enter a valid non-decimal number: ");
             userInt = getInt();
@@ -114,7 +114,7 @@ public class Input {
         try{
             String s = getString();
             userBinary = Integer.parseInt(s,2);
-        }catch(Exception e){
+        }catch(NumberFormatException e){
             System.out.println("Enter a valid binary number: ");
             userBinary = getBinary();
         }
@@ -126,7 +126,7 @@ public class Input {
         try{
             String s = getString();
             userHex = Integer.parseInt(s,16);
-        }catch(Exception e){
+        }catch(NumberFormatException e){
             System.out.println("Enter a valid hex number: ");
             userHex = getHex();
         }

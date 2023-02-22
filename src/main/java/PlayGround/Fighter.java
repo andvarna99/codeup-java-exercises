@@ -9,8 +9,7 @@ public class Fighter {
 
     private String name;
 
-    private int strength;
-//    protected int strength;
+    protected int strength;
 
 //    private String weaponName;
 //    private int weaponDamage;
@@ -32,6 +31,21 @@ public class Fighter {
     public Fighter(String name, int strength) {
         this.name = name;
         this.strength = strength;
+    }
+
+    public String toFileString(){
+        return String.format("%s,%d,%d", name, health, strength);
+    }
+
+    //method looks weird when we expect fighter objects, but this special method is really useful to make
+    // a bunch of fighters from a string: called a builder method
+    public static Fighter fromFileString(String fileString){
+        //file format is name,health,strength
+        String [] pieces = fileString.split(","); //just like split in JS
+        Fighter fighter = new Fighter(pieces[0]);
+        fighter.setHealth(Integer.parseInt(pieces[1]));
+        fighter.setStrength(Integer.parseInt(pieces[2]));
+        return fighter;
     }
 
     //defining equals to use in the collections lecture
