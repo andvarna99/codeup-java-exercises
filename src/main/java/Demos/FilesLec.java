@@ -47,13 +47,13 @@ public class FilesLec {
 
 //--------writing to a file with strings--------
         //using java strings are weird: string auto does some things
-//        List<String> fruits = Arrays.asList("apple", "pear", "banana"); //overrides data when you rerun it
-//        try {
-//            //, StandardOpenOption.APPEND
-//            Files.write(aFile, fruits); //appends/adds data when you rerun it
-//        } catch (IOException e) {
-//            System.out.println("file write exception: " + e.getMessage());
-//        }
+        List<String> fruits = Arrays.asList("apple", "pear", "banana"); //overrides data when you rerun it
+        try {
+            //, StandardOpenOption.APPEND
+            Files.write(aFile, fruits); //appends/adds data when you rerun it
+        } catch (IOException e) {
+            System.out.println("file write exception: " + e.getMessage());
+        }
 
 //--------reading a file of strings--------
 //        try {
