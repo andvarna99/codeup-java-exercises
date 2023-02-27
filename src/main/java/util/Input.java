@@ -24,8 +24,7 @@ public class Input {
 //    get a string with a prompt
     public String getString(String prompt){
         System.out.println(prompt);
-        scanner.nextLine();
-        return getString();
+        return scanner.nextLine();
     }
 
 //    get a boolean value
