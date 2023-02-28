@@ -23,6 +23,9 @@ public class Fighter {
     }
 
     public Fighter(String name) {
+        if (name.length()< 3){
+            throw new IllegalArgumentException("Fighter name must be at least 5 characters"); // stop java exception
+        }
         this.name = name;
         health = 100;
         strength = 10;

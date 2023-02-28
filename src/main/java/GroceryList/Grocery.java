@@ -1,4 +1,4 @@
-package grocerylist;
+package GroceryList;
 
 
 import java.util.Objects;
